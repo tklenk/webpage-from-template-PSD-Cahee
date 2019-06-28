@@ -51,6 +51,9 @@ a {
 
 /* Header */
 
+.site-logo a {
+    color: black;
+}
 .site-header {
     padding-top: 45px;
 }
