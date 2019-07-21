@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=latin-ext"
           rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -243,5 +244,26 @@
     </div>
 </footer>
 
+
+<script>
+
+$(function(){
+ var shrinkHeader = 100;
+ console.log('shrink', shrinkHeader)
+  $(window).scroll(function() {
+    var scroll = getCurrentScroll();
+      if ( scroll >= shrinkHeader ) {
+           $('.site-header').addClass('shrink');
+        }
+        else {
+            $('.site-header').removeClass('shrink');
+        }
+  });
+function getCurrentScroll() {
+    return window.pageYOffset || document.documentElement.scrollTop;
+    }
+});
+
+</script>
 </body>
 </html>
